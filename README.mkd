@@ -1,0 +1,23 @@
+# Redmine SSO authentication plugin
+
+When enabled, this plugin checks for a configurable environment variable
+(server environment or HTTP header using the `HTTP_` prefix) and if it's set,
+it uses the value as the logged-in username (or email).
+
+This project is a stripped-down version of
+https://github.com/AdamLantos/redmine_http_auth.
+
+## Installation
+
+Put `redmine-sso-auth` into `redmine/plugins`, then from `redmine/` run:
+
+    rake redmine:plugins:migrate RAILS_ENV=production
+
+If using bundler, run:
+
+    bundle exec rake redmine:plugins:migrate RAILS_ENV=production
+
+# License
+
+MIT. See LICENSE.
+
