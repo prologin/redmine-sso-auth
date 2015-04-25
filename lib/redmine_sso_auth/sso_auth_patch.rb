@@ -57,10 +57,6 @@ module RedmineSSOAuth
         session[:sso_authentication] == true
       end
 
-      def use_email?
-        Setting.plugin_redmine_sso_auth['lookup_mode'] == 'mail'
-      end
-
       def session_changed?(user, remote_username)
         if user.nil?
           true
