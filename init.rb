@@ -10,7 +10,7 @@ Redmine::Plugin.register :redmine_sso_auth do
   settings :partial => 'settings/redmine_sso_auth_settings',
     :default => {
       'enable' => 'true',
-      'server_env_var' => 'HTTP_REMOTE_USER',
+      'server_env_var' => 'HTTP_X_SSO_USER',
       'lookup_mode' => 'login',
       'keep_sessions' => 'false'
     }
